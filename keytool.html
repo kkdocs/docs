@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>keytool</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link href="bootstrap.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="tabbable-panel">
+      <div class="tabbable-line">
+        <ul class="nav nav-tabs ">
+          <li><a href="index.html" data-toggle="tab">index</a></li>
+          <li class="active"><a href="keytool.html" data-toggle="tab">keytool</a></li>
+        </ul>
+      </div>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr><th>Server Side</th><th>Client Side</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Generate server PrivateKey in server PrivateKeyStore <i>tserver.jks</i></td>
+          <td>Generate client PrivateKey in client PrivateKeyStore <i>tclient.jks</i></td>
+        </tr>
+        <tr>
+          <td><b>keytool</b> <b>-genkey</b> -alias <i>tserver</i> -keysize 2048 -validity 365 -keyalg RSA -dname "CN=<i>tserver</i>" -keypass <i>tserver.key.pass</i> -storepass <i>tserver.store.pass</i> -keystore <i>tserver.jks</i></td>
+          <td><b>keytool</b> <b>-genkey</b> -alias <i>tclient</i> -keysize 2048 -validity 365 -keyalg RSA -dname "CN=<i>tclient</i>" -keypass <i>tclient.key.pass</i> -storepass <i>tclient.store.pass</i> -keystore <i>tclient.jks</i></td>
+        </tr>
+        <tr>
+          <td>Export PublicCertificate (PublicKey) <i>tserver.crt</i> from server PrivateKeyStore <i>tserver.jks</i></td>
+          <td>Export PublicCertificate (PublicKey) <i>tclient.crt</i> from client PrivateKeyStore <i>tclient.jks</i></td>
+        </tr>
+        <tr>
+          <td><b>keytool</b> <b>-export</b> -alias <i>tserver</i> -file <i>tserver.crt</i> -keystore <i>tserver.jks</i> -keypass <i>tserver.key.pass</i> -storepass <i>tserver.store.pass</i> </td>
+          <td><b>keytool</b> <b>-export</b> -alias <i>tclient</i> -file <i>tclient.crt</i> -keystore <i>tclient.jks</i> -keypass <i>tclient.key.pass</i> -storepass <i>tclient.store.pass</i> </td>
+        </tr>
+        <tr>
+          <td>Import TrustedCertificate (client PublicKey) to server TrustedKeyStore <i>tservertrusted.jks</i></td>
+          <td>Import TrustedCertificate (server PublicKey) to client TrustedKeyStore <i>tclienttrusted.jks</i></td>
+        </tr>
+        <tr>
+          <td><b>keytool</b> <b>-import</b> -trustcacerts -alias <i>tclient</i> -file <i>tclient.crt</i> -keystore <i>tservertrusted.jks</i> -storepass <i>tserver.trusted.pass</i> </td>
+          <td><b>keytool</b> <b>-import</b> -trustcacerts -alias <i>tserver</i> -file <i>tserver.crt</i> -keystore <i>tclienttrusted.jks</i> -storepass <i>tclient.trusted.pass</i> </td>
+        </tr>
+        <tr>
+          <td>List server PrivateKeyStore</td>
+          <td>List client PrivateKeyStore</td>
+        </tr>
+        <tr>
+          <td><b>keytool</b> <b>-list</b> -keystore <i>tserver.jks</i> -storepass <i>tserver.store.pass</i> </td>
+          <td><b>keytool</b> <b>-list</b> -keystore <i>tclient.jks</i> -storepass <i>tclient.store.pass</i> </td>
+        </tr>
+        <tr>
+          <td>List server TrustedKeyStore</td>
+          <td>List client TrustedKeyStore</td>
+        </tr>
+        <tr>
+          <td><b>keytool</b> <b>-list</b> -keystore <i>tservertrusted.jks</i> -storepass <i>tserver.trusted.pass</i> </td>
+          <td><b>keytool</b> <b>-list</b> -keystore <i>tclienttrusted.jks</i> -storepass <i>tclient.trusted.pass</i> </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
