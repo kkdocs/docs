@@ -25,6 +25,52 @@
             <tr><td><b>sed</b> 's&#47;<i>origin</i>&#47;<i>replacement</i>&#47;g'</td><td>replace text <i>origin</i> to <i>replacement</i></td></tr>
           </tbody>
         </table>
+        <table class="table table-bordered table-condensed">
+          <thead><tr><th class="danger" colspan="2">IF Condition</th></tr></thead>
+          <tbody>
+            <tr>
+              <td colspan="2">
+                if [[ <i>condition1</i> ]]<br>
+                then<br>
+                <i>&nbsp;# an action</i><br>
+                elif [[ <i>condition2</i> ]]<br>
+                then<br>
+                <i>&nbsp;# an action</i><br>
+                else<br>
+                <i>&nbsp;# an action for else</i><br>
+                fi
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered table-condensed">
+          <thead><tr><th class="danger" colspan="2">Conditions</th></tr></thead>
+          <tbody>
+            <tr><td><b>!</b></td><td>boolean NOT</td></tr>
+            <tr><td><b>&amp;&amp;</b></td><td>boolean AND</td></tr>
+            <tr><td><b>||</b></td><td>boolean OR</td></tr>
+            <tr><td><b>-z</b> <i>string</i></td><td><i>string</i> is empty</td></tr>
+            <tr><td><b>-n</b> <i>string</i></td><td><i>string</i> is not empty</td></tr>
+            <tr><td><i>number1/string1</i> <b>==</b> <i>number2/string2</i></td><td>numbers/strings are equal</td></tr>
+            <tr><td><i>number1/string1</i> <b>-eq</b> <i>number2/string2</i></td><td>numbers/strings are equal</td></tr>
+            <tr><td><i>number1/string1</i> <b>!=</b> <i>number2/string2</i></td><td>numbers/strings are not equal</td></tr>
+            <tr><td><i>number1/string1</i> <b>-ne</b> <i>number2/string2</i></td><td>numbers/strings are not equal</td></tr>
+            <tr><td><i>number1/string1</i> <b>&lt;</b> <i>number2/string2</i></td><td><i>number1/string1</i> is less than <i>number2/string2</i></td></tr>
+            <tr><td><i>number1/string1</i> <b>-lt</b> <i>number2/string2</i></td><td><i>number1/string1</i> is less than <i>number2/string2</i></td></tr>
+            <tr><td><i>number1/string1</i> <b>-le</b> <i>number2/string2</i></td><td><i>number1/string1</i> is less than or equal <i>number2/string2</i></td></tr>
+            <tr><td><i>number1/string1</i> <b>&gt;</b> <i>number2/string2</i></td><td><i>number1/string1</i> is greater than <i>number2/string2</i></td></tr>
+            <tr><td><i>number1/string1</i> <b>-gt</b> <i>number2/string2</i></td><td><i>number1/string1</i> is greater than <i>number2/string2</i></td></tr>
+            <tr><td><i>number1/string1</i> <b>-ge</b> <i>number2/string2</i></td><td><i>number1/string1</i> is greater than <i>number2/string2</i></td></tr>
+            <tr><td><b>-e</b> <i>path</i></td><td><i>path</i> exists</td></tr>
+            <tr><td><b>-f</b> <i>path</i></td><td><i>path</i> is file</td></tr>
+            <tr><td><b>-d</b> <i>path</i></td><td><i>path</i> is directory</td></tr>
+            <tr><td><b>-s</b> <i>file</i></td><td><i>file</i> size greater than 0</td></tr>
+            <tr><td><b>-x</b> <i>file</i></td><td><i>file</i> is executable</td></tr>
+            <tr><td><b>-r</b> <i>path</i></td><td><i>path</i> is available for read</td></tr>
+            <tr><td><b>-w</b> <i>path</i></td><td><i>path</i> is available for write</td></tr>
+            <tr><td><b>-x</b> <i>path</i></td><td><i>path</i> is available for execute</td></tr>
+          </tbody>
+        </table>
       </td>
       <td>
         <table class="table table-bordered table-condensed">
