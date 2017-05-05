@@ -20,6 +20,8 @@
         <table class="table table-bordered table-condensed">
           <thead><tr><th class="success" colspan="2">Text</th></tr></thead>
           <tbody>
+            <tr><td><b>split -l</b> <i>number_of_lines</i> <i>file_name</i></td><td>split file by number of lines</td></tr>
+            <tr><td><b>split -b</b> <i>number_of_bytes</i> <i>file_name</i></td><td>split file by number of bytes</td></tr>
             <tr><td><b>sed</b> 's&#47;<i>origin</i>&#47;<i>replacement</i>&#47;g'</td><td>replace text <i>origin</i> to <i>replacement</i></td></tr>
           </tbody>
         </table>
@@ -37,6 +39,15 @@
             <tr><td>/etc/profile</td><td>system-wide initialization file, executed for login shells</td></tr>
             <tr><td>~/.bash_profile</td><td>executed only with login shells i.e. during first log in into system</td></tr>
             <tr><td>~/.bashrc</td><td>executed when non-login bash shell is opened</td></tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered table-condensed">
+          <thead><tr><th class="warning" colspan="2">Process</th></tr></thead>
+          <tbody>
+            <tr><td>/proc/<i>PID</i></td><td>process folder</td></tr>
+            <tr><td>/proc/<i>PID</i>/env</td><td>process environment variables</td></tr>
+            <tr><td>/proc/<i>PID</i>/fd</td><td>process file descriptors (list of opened files)</td></tr>
+            <tr><td>/proc/<i>PID</i>/cmdline</td><td>process command line arguments</td></tr>
           </tbody>
         </table>
       </td>
