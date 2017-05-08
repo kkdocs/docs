@@ -26,10 +26,10 @@
           </tbody>
         </table>
         <table class="table table-bordered table-condensed">
-          <thead><tr><th class="danger" colspan="2">IF Condition</th></tr></thead>
+          <thead><tr><th class="danger">IF Condition</th><th class="danger">LOOP</th></tr></thead>
           <tbody>
             <tr>
-              <td colspan="2">
+              <td>
                 <b>if</b> [[ <small>condition1</small> ]]<br>
                 <b>then</b><br>
                 <small>&nbsp;# an action</small><br>
@@ -39,6 +39,23 @@
                 <b>else</b><br>
                 <small>&nbsp;# an action for else</small><br>
                 <b>fi</b>
+              </td>
+              <td>
+                <b>for</b> i <b>in</b> <small>array</small> <b>do</b><br>
+                  <small># an action, i on every iteration is getting the next value from array</small><br>
+                <b>done</b><br>
+                <br>
+                <b>for</b> i <b>in</b> <small>/tmp/*.txt;</small> <b>do</b><br>
+                  <small># an action, i on every iteration is getting the next matching file</small><br>
+                <b>done</b><br>
+                <br>
+                <b>for</b> (( i = 0; i &lt; 10; i++ )) <b>do</b><br>
+                  <small># an action, i on every iteration is getting the next value</small><br>
+                <b>done</b><br>
+                <br>
+                <b>while</b> [ <small>condition</small> ] <b>do</b><br>
+                  <small># an action, while <small>condition</small> is true</small><br>
+                <b>done</b>
               </td>
             </tr>
           </tbody>
