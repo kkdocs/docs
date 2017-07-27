@@ -30,10 +30,10 @@
           <tbody>
             <tr>
               <td>
-                <b>if</b> [[ <small>condition1</small> ]]<br>
+                <b>if</b> [ <small>condition1</small> ]<br>
                 <b>then</b><br>
                 <small>&nbsp;# an action</small><br>
-                <b>elif</b> [[ <small>condition2</small> ]]<br>
+                <b>elif</b> [ <small>condition2</small> ]<br>
                 <b>then</b><br>
                 <small>&nbsp;# an action</small><br>
                 <b>else</b><br>
@@ -86,12 +86,24 @@
             <tr><td><b>-r</b> <small>path</small></td><td>path is available for read</td></tr>
             <tr><td><b>-w</b> <small>path</small></td><td>path is available for write</td></tr>
             <tr><td><b>-x</b> <small>path</small></td><td>path is available for execute</td></tr>
+            <tr><td><small>file1</small> <b>-nt</b> <small>file2</small></td><td>is newer than</td></tr>
+            <tr><td><small>file1</small> <b>-ot</b> <small>file2</small></td><td>is older than</td></tr>
           </tbody>
         </table>
       </td>
       <td>
         <table class="table table-bordered table-condensed">
           <thead><tr><th>#!/bin/bash</th></tr></thead>
+        </table>
+        <table class="table table-bordered table-condensed">
+          <thead><tr><th class="info" colspan="2">Base</th></tr></thead>
+          <tbody>
+            <tr><td><b>echo</b> <small>"text"</small></td><td>print out text</td></tr>
+            <tr><td><b>echo</b> <small>$HOME</small></td><td>print out variable</td></tr>
+            <tr><td><b>echo</b> <small>"Home: $HOME"</small></td><td>print out text with variable</td></tr>
+            <tr><td><b>$(</b><small>command</small><b>)</b></td><td>obtain command result</td></tr>
+            <tr><td><b>$(( </b><small>$x + $y</small><b> ))</b></td><td>calculate mathematical expression</td></tr>
+          </tbody>
         </table>
         <table class="table table-bordered table-condensed">
           <thead><tr><th class="info" colspan="2">System</th></tr></thead>
