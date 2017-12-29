@@ -45,7 +45,7 @@
       </td>
       <td>
         <table class="table table-bordered table-condensed">
-          <thead><tr><th class="danger" colspan="2">git-merge</th></tr></thead>
+          <thead><tr><th class="warning" colspan="2">git-merge</th></tr></thead>
           <tbody>
             <tr>
                 <td><b>git merge</b> <small>branchname</small> [--ff | --no-ff]</td>
@@ -58,6 +58,22 @@
             </tr>
             <tr><td><b>git merge --continue</b></td><td>conclude the merge after a git merge stops due to conflicts</td></tr>
             <tr><td><b>git merge --abort</b></td><td>abort the current conflict resolution process, and try to reconstruct the pre-merge state</td></tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered table-condensed">
+          <thead><tr><th class="danger" colspan="2">git-push</th></tr></thead>
+          <tbody>
+            <tr>
+                <td><b>git push</b> <small>remote</small> [<small>branchname</small>] [-f]</td>
+                <td>
+                  push the specified branch (or current branch if not specified) from local repository to <small>remote</small> repository;<br>
+                  this creates a local branch in the <small>remote</small> repository;<br>
+                  command refuses to update a <small>remote</small> repository that is not an ancestor of the local repository<br>
+                  <i>-f</i> <i>--force</i> disable the ancestor check (can cause the <small>remote</small> repository to lose commits)<br>
+                </td>
+            </tr>
+            <tr><td><b>git push --all</b></td><td>push all local branches to the specified <small>remote</small> repository</td></tr>
+            <tr><td><b>git push --tags</b></td><td>push all local tags to the specified <small>remote</small> repository</td></tr>
           </tbody>
         </table>
       </td>
