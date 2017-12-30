@@ -26,18 +26,18 @@
               <td><b>git branch</b> <small>new-branchname</small> [<small>start-point</small>]</td>
               <td>create new branch <small>new-branchname</small> which points to the current HEAD, or <small>start-point</small> if given (branch name, commit-id, or tag)<br></td>
             </tr>
-            <tr><td><b>git branch -d</b> <small>branchname</small> [-r] [--force]</td><td>delete a branch (the branch must be fully merged)<br> <i>-r</i> delete the remote-tracking branch<br> <i>--force</i> allow deleting the branch irrespective of its merged status</td></tr>
+            <tr><td><b>git branch -d</b> <small>branchname</small> [-r] -f]</td><td>delete a branch (the branch must be fully merged)<br> <i>-r</i> delete the remote-tracking branch<br> <i>-f</i> <i>--force</i> allow deleting the branch irrespective of its merged status</td></tr>
             <tr><td><b>git branch -D</b> <small>branchname</small> [-r]</td><td>delete a branch irrespective of its merged status (similar to <i>-d --force</i>)<br> <i>-r</i> delete the remote-tracking branch</td></tr>
-            <tr><td><b>git branch -m</b> <small>old-branchname</small> <small>new-branchname</small> [--force]</td><td>move/rename a branch<br> <i>--force</i> allow renaming the branch even if the new branch name already exists</td></tr>
+            <tr><td><b>git branch -m</b> <small>old-branchname</small> <small>new-branchname</small> [-f]</td><td>move/rename a branch<br> <i>-f</i> <i>--force</i> allow renaming the branch even if the new branch name already exists</td></tr>
             <tr><td><b>git branch -M</b> <small>old-branchname</small> <small>new-branchname</small> </td><td>move/rename a branch even if the new branch name already exists(similar to <i>-m --force</i>)</td></tr>
-            <tr><td><b>git branch -c</b> <small>old-branchname</small> <small>new-branchname</small> [--force]</td><td>copy a branch<br> <i>--force</i> allow coping the branch even if the new branch name already exists</td></tr>
+            <tr><td><b>git branch -c</b> <small>old-branchname</small> <small>new-branchname</small> [-f]</td><td>copy a branch<br> <i>-f</i> <i>--force</i> allow coping the branch even if the new branch name already exists</td></tr>
             <tr><td><b>git branch -C</b> <small>old-branchname</small> <small>new-branchname</small> </td><td>copy a branch even if the new branch name already exists(similar to <i>-c --force</i>)</td></tr>
           </tbody>
         </table>
         <table class="table table-bordered table-condensed">
           <thead><tr><th class="success" colspan="2">git-checkout</th></tr></thead>
           <tbody>
-            <tr><td><b>git checkout</b> <small>branchname</small> [--force]</td><td>switch to branch<br> <i>--force</i> proceed even if the index or the working tree differs from HEAD (throw away local changes)</td></tr>
+            <tr><td><b>git checkout</b> <small>branchname</small> [-f]</td><td>switch to branch<br> <i>-f</i> <i>--force</i> proceed even if the index or the working tree differs from HEAD (throw away local changes)</td></tr>
             <tr><td><b>git checkout -b</b> <small>new-branchname</small> [<small>start-point</small>]</td><td>switch to new created branch which starts at HEAD, or <small>start-point</small> if given (branch name, commit-id, or tag)</td></tr>
             <tr><td><b>git checkout -B</b> <small>new-branchname</small> [<small>start-point</small>]</td><td>switch to new created branch which starts at HEAD, or <small>start-point</small> if given (branch name, commit-id, or tag); if it already exists, then reset it to <small>start-point</small></td></tr>
           </tbody>
@@ -78,8 +78,8 @@
                   <i>-f</i> <i>--force</i> disable the ancestor check (can cause the <small>remote</small> repository to lose commits)<br>
                 </td>
             </tr>
-            <tr><td><b>git push --all</b></td><td>push all local branches to the specified <small>remote</small> repository</td></tr>
-            <tr><td><b>git push --tags</b></td><td>push all local tags to the specified <small>remote</small> repository</td></tr>
+            <tr><td><b>git push <small>remote</small> --all</b></td><td>push all local branches to the <small>remote</small> repository</td></tr>
+            <tr><td><b>git push <small>remote</small> --tags</b></td><td>push all local tags to the <small>remote</small> repository</td></tr>
           </tbody>
         </table>
       </td>
