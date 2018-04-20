@@ -92,6 +92,21 @@
           </tbody>
         </table>
         <table class="table table-bordered table-condensed">
+          <thead><tr><th class="warning" colspan="2">git-rebase</th></tr></thead>
+          <tbody>
+            <tr>
+                <td><b>git rebase</b> [-i] [<small>upstream</small> [<small>branch</small>]]</td>
+                <td>
+                  reapply commits on top of another base tip<br>
+                  <small>upstream</small> upstream branch or commit to compare against (defaults to the configured upstream for the current branch)<br>
+                  <small>branch</small> working branch (defaults to HEAD)
+                </td>
+            </tr>
+            <tr><td><b>git rebase --continue</b></td><td>conclude the rebase after a git rebase stops due to conflicts</td></tr>
+            <tr><td><b>git rebase --abort</b></td><td>abort the current conflict resolution process and reset HEAD to the original branch</td></tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered table-condensed">
           <thead><tr><th class="danger" colspan="2">git-push</th></tr></thead>
           <tbody>
             <tr>
