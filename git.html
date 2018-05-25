@@ -149,18 +149,13 @@
           <thead><tr><th class="info">git-fetch + git-merge / git-fetch + git-rebase</th></tr></thead>
           <tbody>
             <tr><td>
-              <pre>
-              local:  1---2---3---4 
-              origin: 1---2---5
-              </pre>
-              <br>
-              <b>V git-fetch + git-merge V</b>
-              <br>
-              <pre>
-              local:  1---2---3---4---6 (merge-commit)
-                           \         /
-                            5-------
-              </pre>
+<pre>
+local:  1---2---3---4 
+origin: 1---2---5
+<b>git-fetch + git-merge</b>
+local:  1---2---3---4---6 (merge-commit)
+             \         /
+               5------</pre>
             </td></tr>
          </tbody>
         </table>
